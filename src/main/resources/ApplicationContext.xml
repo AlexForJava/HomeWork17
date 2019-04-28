@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
+       default-lazy-init="true">
+
+
+    <bean id="bmwSingleton" class="com.gmail.entity.BmwCar">
+        <constructor-arg name="maxSpeed" index="0" value="200" type="int"/>
+        <constructor-arg name="cost" index="1" value="50000" type="int"/>
+    </bean>
+    <bean id="bmwPrototype" class="com.gmail.entity.BmwCar">
+        <constructor-arg name="maxSpeed" index="0" value="200" type="int"/>
+        <constructor-arg name="cost" index="1" value="50000" type="int"/>
+    </bean>
+
+    <bean id="audiSingleton" class="com.gmail.entity.AudiCar"
+          init-method="init" destroy-method="destroy">
+        <constructor-arg name="maxSpeed" index="0" value="250" type="int"/>
+        <constructor-arg name="cost" index="1" value="70000" type="int"/>
+    </bean>
+    <bean id="audiPrototype" class="com.gmail.entity.AudiCar"
+          init-method="init" destroy-method="destroy" scope="prototype">
+        <constructor-arg name="maxSpeed" index="0" value="250" type="int"/>
+        <constructor-arg name="cost" index="1" value="70000" type="int"/>
+    </bean>
+</beans>
