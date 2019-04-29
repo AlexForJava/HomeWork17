@@ -21,13 +21,13 @@ public class AudiCar implements Car, BeanPostProcessor {
 
     @Override
     public void go() {
-        System.out.println("Audi car is going...");
-        System.out.println("Speed " + Math.random() * maxSpeed);
+        log.info("Audi car is going...");
+        log.info("Speed " + Math.random() * maxSpeed);
     }
 
     @Override
     public void stop() {
-        System.out.println("Audi car've stopped...");
+        log.info("Audi car've stopped...");
     }
 
     @Override

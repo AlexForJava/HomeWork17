@@ -9,9 +9,9 @@ public class Application {
 
     public static void main(String[] args) {
         ApplicationContext context = new ClassPathXmlApplicationContext(APPLICATION_CONTEXT);
-        Car bmwSingleton = (Car) context.getBean("bmwSingleton");
-        Car bmwPrototype = (Car) context.getBean("bmwPrototype");
-        Car audiSingleton = (Car) context.getBean("audiSingleton");
-        Car audiPrototype = (Car) context.getBean("audiPrototype");
+        Car bmwSingleton = context.getBean("bmwSingleton", Car.class);
+        Car bmwPrototype = context.getBean("bmwPrototype", Car.class);
+        Car audiSingleton = context.getBean("audiSingleton", Car.class);
+        Car audiPrototype = context.getBean("audiPrototype", Car.class);
     }
 }

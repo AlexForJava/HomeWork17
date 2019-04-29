@@ -24,13 +24,13 @@ public class BmwCar implements Car, BeanPostProcessor, InitializingBean, Disposa
 
     @Override
     public void go() {
-        System.out.println("Bwm car is going...");
-        System.out.println("Speed " + Math.random() * maxSpeed);
+        log.info("Bwm car is going...");
+        log.info("Speed " + Math.random() * maxSpeed);
     }
 
     @Override
     public void stop() {
-        System.out.println("Bmw car've stopped...");
+        log.info("Bmw car've stopped...");
     }
 
     @Override

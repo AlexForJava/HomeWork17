@@ -9,7 +9,7 @@
         <constructor-arg name="maxSpeed" index="0" value="200" type="int"/>
         <constructor-arg name="cost" index="1" value="50000" type="int"/>
     </bean>
-    <bean id="bmwPrototype" class="com.gmail.entity.BmwCar">
+    <bean id="bmwPrototype" class="com.gmail.entity.BmwCar" scope="prototype">
         <constructor-arg name="maxSpeed" index="0" value="200" type="int"/>
         <constructor-arg name="cost" index="1" value="50000" type="int"/>
     </bean>
